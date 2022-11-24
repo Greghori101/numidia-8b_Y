@@ -66,7 +66,7 @@ Route::middleware('auth:api')->group(function () {
         Route::get('sessions/{id}', [AdminController::class, 'sessions']);
         Route::get('session/{id}', [AdminController::class, 'show']);
         Route::put('sessions/{id}/reject', [AdminController::class, 'reject_session']);
-        Route::put('sessions/{id}/approved', [AdminController::class, 'approve_session']);
+        Route::put('sessions/{id}/approve', [AdminController::class, 'approve_session']);
     });
 
     Route::middleware('permission:supervisor')->prefix('parent')->group(function () {
